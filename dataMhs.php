@@ -2,14 +2,7 @@
 include 'createdb.php';
 require 'functions.php';
 
-if (isset($_POST["tampilkan"])) {
-    $show = lihat($_POST);
-}elseif (isset($_POST["default"])) {
-    $show = query_getData("SELECT * FROM Mahasiswa");
-}else {
-    $show = query_getData("SELECT * FROM Mahasiswa");
-}
-
+$show = query_getData("SELECT * FROM Mahasiswa");
 
 ?>
 <!DOCTYPE html>
