@@ -1,7 +1,7 @@
 <?php
 require 'functions.php';
 
-$idM = $_GET["hapus"];
+$idM = $_GET["id"];
 if ($uu = delete($idM) > 0) {
     echo "<script>
         alert('Data berhasil dihapus! ☺');
