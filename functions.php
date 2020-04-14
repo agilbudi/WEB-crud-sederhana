@@ -61,21 +61,8 @@ function update($data){
             nama = '$nama', email = '$email', jurusan = '$jurusan',
             jenjang = '$jenjang', jenis_kelamin = '$jenis_kelamin',
             kota_asal = '$kota_asal' WHERE idMahasiswa = $id");
-        //"UPDATE mahasiswa SET nama = 'Agil Budi' WHERE idMahasiswa = 7";
     
     return mysqli_affected_rows($connect);
-}
-
-function lihat($data){
-    global $connect;
-    $all = implode(",", $data["pilihan"]); //$row["nim"]
-    $query = "SELECT $all FROM mahasiswa";
-    $select = mysqli_query($connect, $query);
-    $view = [];
-    while ( $arr = mysqli_fetch_assoc($select)) {
-        $view[] = $arr;
-    }
-    return $view; 
 }
 
 function delete($data){
